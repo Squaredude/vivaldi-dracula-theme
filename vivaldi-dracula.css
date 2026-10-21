@@ -6,3 +6,56 @@
   color: #ff79c6 !important;
   font-weight: bold;
 }
+.UrlBar-AddressField,
+input#urlFieldInput,
+.UrlFragment-Wrapper *,
+.OmniDropdown-Collection > li {
+  color: #50fa7b;
+  font-family: monospace;
+}
+
+.OmniDropdown .OmniLinkItem {
+  height: auto !important;
+  min-height: 40px;
+  align-items: center;
+  padding-block: 4px;
+}
+
+.OmniDropdown .OmniLinkItem-DisplayText {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto !important;
+  max-height: none !important;
+  min-width: 0;
+  line-height: 1.3;
+}
+
+.OmniDropdown .OmniLinkItem-DisplayText > span:not(.displayTitle):not(.displayUrl) {
+  display: none !important;
+}
+
+.OmniDropdown .OmniLinkItem-DisplayText > .displayTitle,
+.OmniDropdown .OmniLinkItem-DisplayText > .displayUrl {
+  display: block !important;
+  flex: 0 0 auto;               /* never shrink to zero */
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.OmniDropdown .OmniLinkItem-DisplayText > .displayTitle {
+  color: #50fa7b;
+}
+.OmniDropdown .OmniLinkItem-DisplayText > .displayUrl {
+  opacity: 0.7;
+  font-size: 0.9em;
+  color: #ff79c6;
+}
+.OmniDropdown .OmniLinkItem--Highlighted > .OmniLinkItem-DisplayText > .displayTitle {
+  color: #282a36;
+}
+.OmniDropdown .OmniLinkItem--Highlighted > .OmniLinkItem-DisplayText > .displayUrl {
+  color: #44475a;
+}
