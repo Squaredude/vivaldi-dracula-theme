@@ -1,0 +1,34 @@
+:root {
+    --checkbox-check-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 7.5l3.5 3.5L13 4.5' fill='none' stroke='white' stroke-width='2' stroke-opacity='0.7'/%3E%3C/svg%3E"); /* checkmark is drawn with white color, default opacity 0.7 */
+    --checkbox-check-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 7.5l3.5 3.5L13 4.5' fill='none' stroke='black' stroke-width='2' stroke-opacity='0.7'/%3E%3C/svg%3E"); /* checkmark is drawn with black color, default opacity 0.7 */
+
+    /* flipped for websites */
+    --checkbox-web-dark-theme-checkmark: var(--checkbox-check-dark);
+    --checkbox-web-light-theme-checkmark: var(--checkbox-check-light);
+
+    --checkbox-filled-color: #50fa7b;
+    --checkbox-unfilled-color: #282a36;
+
+}
+
+input[type="checkbox"] {
+    appearance: none !important;
+    width: 14px !important;
+    height: 14px !important;
+    border: 1px solid hsl(from var(--checkbox-unfilled-color) h s calc(l * 2)) !important;
+    border-radius: 0 !important;
+
+    &:checked {
+        border: 0 !important;
+        background-color: hsl(from var(--checkbox-filled-color) h s calc(l * 0.6)) !important;
+        background-image: var(--checkbox-web-light-theme-checkmark) !important;
+            @media (prefers-color-scheme: dark) {
+                background-image: var(--checkbox-web-dark-theme-checkmark) !important;
+            }
+    }
+
+    &:hover:not(:checked) {
+        border-color: hsl(from var(--checkbox-unfilled-color) h s calc(l * 2.5)) !important;
+        background-color: var(--checkbox-unfilled-color) !important;
+    }
+}
