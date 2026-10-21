@@ -3,9 +3,18 @@
   color: #bd93f9;
 }
 .tab.active .tab-header {
-  color: #ff79c6 !important;
+  color: #f8f8f2 !important;
   font-weight: bold;
 }
+#tabs-container {
+  padding-bottom: 0 !important;
+}
+.tab-wrapper.active {
+  border-top: 1px solid #ff79c6;
+}
+
+
+
 .UrlBar-AddressField,
 input#urlFieldInput,
 .UrlFragment-Wrapper *,
@@ -38,7 +47,7 @@ input#urlFieldInput,
 .OmniDropdown .OmniLinkItem-DisplayText > .displayTitle,
 .OmniDropdown .OmniLinkItem-DisplayText > .displayUrl {
   display: block !important;
-  flex: 0 0 auto;               /* never shrink to zero */
+  flex: 0 0 auto;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
