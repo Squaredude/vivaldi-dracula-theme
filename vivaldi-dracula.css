@@ -4,7 +4,7 @@
 }
 .tab.active .tab-header {
   color: #f8f8f2 !important;
-  font-weight: bold;
+  /*font-weight: bold;*/
 }
 #tabs-container {
   padding-bottom: 0 !important;
