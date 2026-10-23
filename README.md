@@ -2,7 +2,7 @@
 
 This is a fork from https://github.com/neonvoidx/vivaldi-dracula-theme
 
-I'll be adding modifications for myself. The theme is for a square UI.
+I'll be adding modifications for myself. The theme is for a **square UI**. Avoid if you love rounded corners.
 
 ### Installation
 
@@ -16,4 +16,4 @@ I'll be adding modifications for myself. The theme is for a square UI.
       - `Select Folder...` and select the folder where you placed the `vivaldi-dracula.css` file
       - NOTE: This will load all CSS files in that directory
 4. Restart Vivaldi
-5. Install the Stylus extension, create a new style for "Everywhere" and paste the contents of `dracula-checkboxes.css`.
+5. Install the Stylus extension, create new styles for "Everywhere" and paste the contents of `dracula-checkboxes-stylus.css` and `dracula-scrollbars-stylus.css` in each one (so you can toggle them separately whenever you wish).
