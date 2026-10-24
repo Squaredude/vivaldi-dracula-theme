@@ -4,7 +4,6 @@
 }
 .tab.active .tab-header {
   color: #f8f8f2 !important;
-  /*font-weight: bold;*/
 }
 #tabs-container {
   padding-bottom: 0 !important;
@@ -12,7 +11,6 @@
 .tab-wrapper.active {
   border-top: 1px solid #ff79c6;
 }
-
 
 
 .UrlBar-AddressField,
@@ -67,4 +65,23 @@ input#urlFieldInput,
 }
 .OmniDropdown .OmniLinkItem--Highlighted > .OmniLinkItem-DisplayText > .displayUrl {
   color: #44475a;
+}
+
+
+.webpageview.active .startpage {
+    isolation: isolate;
+}
+
+.webpageview.active .startpage::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    backdrop-filter: blur(3px) brightness(0.4);
+    background-color: rgb(189 147 249 / 0.25);
+}
+
+#panels-container {
+  background-color: var(--colorTabBar);
 }
