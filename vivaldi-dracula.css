@@ -1,18 +1,31 @@
-.tab-header {
-  padding-top: 5px;
+/*
+  Changes colors for the tabs beyond Vivaldi's theme capabilities.
+*/
+#tabs-container .tab-header,
+#tabs-subcontainer .tab-header {
   color: #bd93f9;
 }
-.tab.active .tab-header {
+#tabs-container .tab.active,
+#tabs-subcontainer .tab.active {
+  border-top: 1px solid #ff79c6;
+}
+#tabs-container .tab.active .tab-header,
+#tabs-subcontainer .tab.active .tab-header {
   color: #f8f8f2 !important;
+}
+#tabs-container .is-substack .tab-header {
+  color: hsla(265, 89%, 40%, 0.7);
 }
 #tabs-container {
   padding-bottom: 0 !important;
 }
-.tab-wrapper.active {
-  border-top: 1px solid #ff79c6;
-}
 
 
+/*
+  Sets colors for the Address Field
+  Sets monospace font for URLs
+  Shows results in two lines when applicable
+*/
 .UrlBar-AddressField,
 input#urlFieldInput,
 .UrlFragment-Wrapper *,
@@ -20,14 +33,12 @@ input#urlFieldInput,
   color: #50fa7b;
   font-family: monospace;
 }
-
 .OmniDropdown .OmniLinkItem {
   height: auto !important;
   min-height: 40px;
   align-items: center;
   padding-block: 4px;
 }
-
 .OmniDropdown .OmniLinkItem-DisplayText {
   display: flex !important;
   flex-direction: column;
@@ -37,11 +48,9 @@ input#urlFieldInput,
   min-width: 0;
   line-height: 1.3;
 }
-
 .OmniDropdown .OmniLinkItem-DisplayText > span:not(.displayTitle):not(.displayUrl) {
   display: none !important;
 }
-
 .OmniDropdown .OmniLinkItem-DisplayText > .displayTitle,
 .OmniDropdown .OmniLinkItem-DisplayText > .displayUrl {
   display: block !important;
@@ -51,7 +60,6 @@ input#urlFieldInput,
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
 .OmniDropdown .OmniLinkItem-DisplayText > .displayTitle {
   color: #50fa7b;
 }
@@ -68,20 +76,27 @@ input#urlFieldInput,
 }
 
 
+/*
+  Specially for Picture of the Day in Start Page
+  Tints, darkens and blurs the background
+*/
 .webpageview.active .startpage {
     isolation: isolate;
 }
-
 .webpageview.active .startpage::before {
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    backdrop-filter: blur(3px) brightness(0.4);
+    backdrop-filter: blur(5px) brightness(0.4);
     background-color: rgb(189 147 249 / 0.25);
 }
-
 #panels-container {
+  /* fix panels background */
+  background-color: var(--colorTabBar);
+}
+
+button.SpeedDial-Add-Button {
   background-color: var(--colorTabBar);
 }
