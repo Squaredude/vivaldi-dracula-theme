@@ -15,6 +15,7 @@
 *::-webkit-scrollbar-thumb {
     background-color: var(--sb-thumb) !important;
     border: 2px solid hsl(from var(--sb-thumb) h s calc(l * 0.8)) !important;
+    border-radius: 0 !important;
 }
 *::-webkit-scrollbar-thumb:hover {
     background-color: var(--sb-thumb-hover) !important;
