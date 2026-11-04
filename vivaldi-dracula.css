@@ -1,20 +1,152 @@
 /*
+  Dracula Colors
+*/
+
+:root {
+  --vivaldi-dracula-background-color: #282a36;
+  --vivaldi-dracula-foreground-color: #f8f8f2;
+  --vivaldi-dracula-comment-color: #6272a4;
+  --vivaldi-dracula-selection-color: #44475a;
+  --vivaldi-dracula-currentline-color: #44475a;
+  --vivaldi-dracula-cyan-color: #8be9fd;
+  --vivaldi-dracula-green-color: #50fa7b;
+  --vivaldi-dracula-orange-color: #ffb86c;
+  --vivaldi-dracula-pink-color: #ff79c6;
+  --vivaldi-dracula-purple-color: #bd93f9;
+  --vivaldi-dracula-red-color: #ff5555;
+  --vivaldi-dracula-yellow-color: #f1fa8c;
+
+  /* Extended colors */
+  --vivaldi-dracula-blue-color: #889ffc;
+  --vivaldi-dracula-teal-color: #6ef7c9;
+}
+
+
+:root #browser {
+  --stackBgAlpha: 0.2;
+}
+:root #browser .color1 {
+  --stackColorBg: var(--vivaldi-dracula-selection-color);
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-foreground-color);
+}
+:root #browser .color2 {
+  --stackColorBg: var(--vivaldi-dracula-blue-color);
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-foreground-color);
+}
+:root #browser .color3 {
+  --stackColorBg: var(--vivaldi-dracula-red-color);
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-foreground-color);
+}
+:root #browser .color4 {
+  --stackColorBg: var(--vivaldi-dracula-yellow-color);
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-background-color);
+}
+:root #browser .color5 {
+  --stackColorBg: (var(--vivaldi-dracula-green-color));
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-foreground-color);
+}
+:root #browser .color6 {
+  --stackColorBg: var(--vivaldi-dracula-pink-color);
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-foreground-color);
+}
+:root #browser .color7 {
+  --stackColorBg: var(--vivaldi-dracula-purple-color);
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-foreground-color);
+}
+:root #browser .color8 {
+  --stackColorBg: var(--vivaldi-dracula-teal-color);
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-foreground-color);
+}
+:root #browser .color9 {
+  --stackColorBg: var(--vivaldi-dracula-orange-color);
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-background-color);
+}
+
+
+:root .theme-dark#browser .color1 {
+  --stackColorBg: hsl(from var(--vivaldi-dracula-selection-color) h s 65%);
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-background-color);
+}
+:root .theme-dark#browser .color2 {
+  --stackColorBg: hsl(from var(--vivaldi-dracula-blue-color) h 100% 75%);
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-background-color);
+}
+:root .theme-dark#browser .color3 {
+  --stackColorBg: hsl(from var(--vivaldi-dracula-red-color) h s 75%);
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-background-color);
+}
+:root .theme-dark#browser .color4 {
+  --stackColorBg: hsl(from var(--vivaldi-dracula-yellow-color) h 65% 65%);
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-background-color);
+}
+:root .theme-dark#browser .color5 {
+  --stackColorBg: hsl(from var(--vivaldi-dracula-green-color) h 85% 85%);
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-background-color);
+}
+:root .theme-dark#browser .color6 {
+  --stackColorBg: hsl(from var(--vivaldi-dracula-pink-color) h 90% 85%);
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-background-color);
+}
+:root .theme-dark#browser .color7 {
+  --stackColorBg: hsl(from var(--vivaldi-dracula-purple-color) h 80% 80%);
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-background-color);
+}
+:root .theme-dark#browser .color8 {
+  --stackColorBg: hsl(from var(--vivaldi-dracula-teal-color) h 85% 80%);
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-background-color);
+}
+:root .theme-dark#browser .color9 {
+  --stackColorBg: hsl(from var(--vivaldi-dracula-orange-color) h 90% 80%);
+  --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
+  --stackColorFg: var(--vivaldi-dracula-background-color);
+}
+
+/*
   Changes colors for the tabs beyond Vivaldi's theme capabilities.
 */
+#tabs-container .tab.active .tab-header,
+#tabs-subcontainer .tab.active .tab-header {
+  color: var(--vivaldi-dracula-foreground-color) !important;
+}
 #tabs-container .tab-header,
 #tabs-subcontainer .tab-header {
-  color: #bd93f9;
+  color: hsl(from var(--vivaldi-dracula-purple-color) h 50% 50%);
 }
 #tabs-container .tab.active,
 #tabs-subcontainer .tab.active {
-  border-top: 1px solid #ff79c6;
+  border-top: 1px solid var(--vivaldi-dracula-pink-color);
 }
-#tabs-container .tab.active .tab-header,
-#tabs-subcontainer .tab.active .tab-header {
-  color: #f8f8f2 !important;
+#tabs-container .color1 .tab.active.tab-in-accordion,
+#tabs-container .color2 .tab.active.tab-in-accordion,
+#tabs-container .color3 .tab.active.tab-in-accordion,
+#tabs-container .color4 .tab.active.tab-in-accordion,
+#tabs-container .color5 .tab.active.tab-in-accordion,
+#tabs-container .color6 .tab.active.tab-in-accordion,
+#tabs-container .color7 .tab.active.tab-in-accordion,
+#tabs-container .color8 .tab.active.tab-in-accordion,
+#tabs-container .color9 .tab.active.tab-in-accordion {
+  background-color: hsl(from var(--stackColorBg) h calc(s * 0.4) calc(l * 0.4)) !important;
+  color: var(--stackColorFg);
 }
 #tabs-container .is-substack .tab-header {
-  color: hsla(265, 89%, 40%, 0.7);
+  color: hsl(from var(--vivaldi-dracula-purple-color) h 50% 30% / 0.5);
 }
 #tabs-container {
   padding-bottom: 0 !important;
@@ -30,7 +162,7 @@
 input#urlFieldInput,
 .UrlFragment-Wrapper *,
 .OmniDropdown-Collection > li {
-  color: #50fa7b;
+  color: var(--vivaldi-dracula-green-color);
   font-family: monospace;
 }
 .OmniDropdown .OmniLinkItem {
@@ -61,18 +193,18 @@ input#urlFieldInput,
   white-space: nowrap;
 }
 .OmniDropdown .OmniLinkItem-DisplayText > .displayTitle {
-  color: #50fa7b;
+  color: var(--vivaldi-dracula-green-color);
 }
 .OmniDropdown .OmniLinkItem-DisplayText > .displayUrl {
   opacity: 0.7;
   font-size: 0.9em;
-  color: #ff79c6;
+  color: var(--vivaldi-dracula-pink-color);
 }
 .OmniDropdown .OmniLinkItem--Highlighted > .OmniLinkItem-DisplayText > .displayTitle {
-  color: #282a36;
+  color: var(--vivaldi-dracula-background-color);
 }
 .OmniDropdown .OmniLinkItem--Highlighted > .OmniLinkItem-DisplayText > .displayUrl {
-  color: #44475a;
+  color: var(--vivaldi-dracula-selection-color);
 }
 
 
@@ -90,13 +222,10 @@ input#urlFieldInput,
     z-index: -1;
     pointer-events: none;
     backdrop-filter: blur(5px) brightness(0.4);
-    background-color: rgb(189 147 249 / 0.25);
-}
-#panels-container {
-  /* fix panels background */
-  background-color: var(--colorTabBar);
+    background-color: hsl(from var(--vivaldi-dracula-purple-color) h s l / 0.2);
 }
 
 button.SpeedDial-Add-Button {
   background-color: var(--colorTabBar);
+  color: var(--vivaldi-dracula-foreground-color);
 }
