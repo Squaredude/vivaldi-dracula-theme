@@ -5,7 +5,7 @@ This is a fork from https://github.com/neonvoidx/vivaldi-dracula-theme
 I'll be adding modifications for myself. The theme is for a **square UI**. Avoid if you love rounded corners.
 
 ### Requirements
-* Compact Mode must be enabled (Settings > Appearance > tick Compact Mode).
+* Compact Mode must be enabled (`Settings > Appearance > Compact Mode`).
 
 ### Installation
 
