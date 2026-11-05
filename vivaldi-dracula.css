@@ -19,6 +19,10 @@
   /* Extended colors */
   --vivaldi-dracula-blue-color: #889ffc;
   --vivaldi-dracula-teal-color: #6ef7c9;
+
+  --startpage-background-blur: 3px;
+  --startpage-background-brightness: 0.4;
+  --startpage-background-tint-alpha: 0.3;
 }
 
 
@@ -221,8 +225,8 @@ input#urlFieldInput,
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    backdrop-filter: blur(5px) brightness(0.4);
-    background-color: hsl(from var(--vivaldi-dracula-purple-color) h s l / 0.2);
+    backdrop-filter: blur(var(--startpage-background-blur)) brightness(var(--startpage-background-brightness));
+    background-color: hsl(from var(--vivaldi-dracula-purple-color) h s l / var(--startpage-background-tint-alpha));
 }
 
 button.SpeedDial-Add-Button {
