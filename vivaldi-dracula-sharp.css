@@ -171,6 +171,9 @@
 #tabs-container.right .tab.active:not(.tab-in-accordion) {
   box-shadow: inset var(--vivaldi-dracula-active-tab-thickness) 0 0 0 var(--vivaldi-dracula-pink-color);
 }
+#tabs-container .tab.active .tab-header {
+  color: var(--colorFg);
+}
 @container style(--colorBg: #1f202b) {
   #tabs-container .tab.active .tab-header {
     color: var(--vivaldi-dracula-pink-color);
