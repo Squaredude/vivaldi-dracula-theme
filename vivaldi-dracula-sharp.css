@@ -20,15 +20,26 @@
   --vivaldi-dracula-blue-color: #889ffc;
   --vivaldi-dracula-teal-color: #6ef7c9;
 
+  /* Customizations */
   --startpage-background-blur: 3px;
   --startpage-background-brightness: 0.4;
   --startpage-background-tint-alpha: 0.3;
+
+  --vivaldi-dracula-active-tab-thickness: 2px;
 }
+
+
+
+
+
+/* Tab stack colors */
 
 
 :root #browser {
   --stackBgAlpha: 0.2;
 }
+
+/* Tab stack colors for light theme */
 :root #browser .color1 {
   --stackColorBg: var(--vivaldi-dracula-selection-color);
   --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
@@ -75,7 +86,7 @@
   --stackColorFg: var(--vivaldi-dracula-background-color);
 }
 
-
+/* Tab stack colors for dark theme */
 :root .theme-dark#browser .color1 {
   --stackColorBg: hsl(from var(--vivaldi-dracula-selection-color) h s 65%);
   --stackColorBgAlpha: rgb(from var(--stackColorBg) r g b / var(--stackBgAlpha));
@@ -122,20 +133,21 @@
   --stackColorFg: var(--vivaldi-dracula-background-color);
 }
 
+
+
+
+
 /*
   Changes colors for the tabs beyond Vivaldi's theme capabilities.
 */
-#tabs-container .tab.active .tab-header,
-#tabs-subcontainer .tab.active .tab-header {
-  color: var(--vivaldi-dracula-foreground-color) !important;
+#tabs-container {
+  padding-bottom: 0 !important;
 }
-#tabs-container .tab-header,
-#tabs-subcontainer .tab-header {
-  color: hsl(from var(--vivaldi-dracula-purple-color) h 50% 50%);
+#tabs-container .tab-header {
+  color: hsl(from var(--vivaldi-dracula-purple-color) h 40% 50%);
 }
-#tabs-container .tab.active,
-#tabs-subcontainer .tab.active {
-  border-top: 1px solid var(--vivaldi-dracula-pink-color);
+#tabs-container .tab.tab-in-accordion:not(.active) .tab-header {
+  color: hsl(from var(--vivaldi-dracula-purple-color) h 50% 30% / 0.75);
 }
 #tabs-container .color1 .tab.active.tab-in-accordion,
 #tabs-container .color2 .tab.active.tab-in-accordion,
@@ -149,12 +161,29 @@
   background-color: hsl(from var(--stackColorBg) h calc(s * 0.4) calc(l * 0.4)) !important;
   color: var(--stackColorFg);
 }
-#tabs-container .is-substack .tab-header {
-  color: hsl(from var(--vivaldi-dracula-purple-color) h 50% 30% / 0.5);
+#tabs-container.top .tab.active:not(.tab-in-accordion),
+#tabs-container.bottom .tab.active:not(.tab-in-accordion) {
+  box-shadow: inset 0 var(--vivaldi-dracula-active-tab-thickness) 0 0 var(--vivaldi-dracula-pink-color);
 }
-#tabs-container {
-  padding-bottom: 0 !important;
+#tabs-container.left .tab.active:not(.tab-in-accordion) {
+  box-shadow: inset calc(-1 * var(--vivaldi-dracula-active-tab-thickness)) 0 0 0 var(--vivaldi-dracula-pink-color);
 }
+#tabs-container.right .tab.active:not(.tab-in-accordion) {
+  box-shadow: inset var(--vivaldi-dracula-active-tab-thickness) 0 0 0 var(--vivaldi-dracula-pink-color);
+}
+@container style(--colorBg: #1f202b) {
+  #tabs-container .tab.active .tab-header {
+    color: var(--vivaldi-dracula-pink-color);
+  }
+}
+@container style(--colorBg: #282a36) {
+  #tabs-container .tab.active .tab-header {
+    color: var(--vivaldi-dracula-foreground-color);
+  }
+}
+
+
+
 
 
 /*
@@ -212,6 +241,10 @@ input#urlFieldInput,
 }
 
 
+
+
+
+
 /*
   Specially for Picture of the Day in Start Page
   Tints, darkens and blurs the background
@@ -228,8 +261,7 @@ input#urlFieldInput,
     backdrop-filter: blur(var(--startpage-background-blur)) brightness(var(--startpage-background-brightness));
     background-color: hsl(from var(--vivaldi-dracula-purple-color) h s l / var(--startpage-background-tint-alpha));
 }
-
 button.SpeedDial-Add-Button {
-  background-color: var(--colorTabBar);
-  color: var(--vivaldi-dracula-foreground-color);
+  background-color: color-mix(in srgb, var(--colorBg), transparent 35%);
+  color: var(--colorFgFaded);
 }
